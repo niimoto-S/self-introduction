@@ -3,10 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <title>hello world</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css"
+	href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/css/5-4-1.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
 
-	<h1>hello world</h1>
+	<header>
+		<div>
+			<h1>自己紹介サイト</h1>
+		</div>
+
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<ul class="tab">
+				<li><a href="#profile">プロフィール</a></li>
+				<li><a href="#hobby">趣味</a></li>
+				<li><a href="#birthplace">出身地</a></li>
+				<li><a href="#othor">その他</a></li>
+			</ul>
+			<div id="profile" class="area">
+				<h2>プロフィール</h2>
+				<ul>
+					<li>名前
+						<div id="text1">仁井本 昇馬</div>
+					</li>
+					<li>年齢
+						<div id="text1">22才</div>
+					</li>
+					<li>誕生日
+						<div id="text1">5月6日</div>
+					</li>
+					<li>好きな食べ物
+						<div id="text1">寿司・刺身</div>
+					</li>
+					<li>嫌いな食べ物
+						<div id="text1">トマト</div>
+					</li>
+				</ul>
+				<!--/area-->
+			</div>
+			<div id="hobby" class="area">
+				<h2>趣味</h2>
+				<ul>
+					<li>
+						<div>PCゲームやVR</div>
+						<section>
+							<img alt="main画像" id="main" src="img/01.png"width="20%" height="20%"><br>
+							<img alt="sub画像1" class="sub" src="img/01.png" data-image="img/01.png">
+							<img alt="sub画像2" class="sub" src="img/02.png" data-image="img/02.png">
+							<img alt="sub画像3" class="sub" src="img/03.png" data-image="img/03.png">
+						</section>
+					</li>
+					<li>料理</li>
+				</ul>
+				<!--/area-->
+			</div>
+			<div id="birthplace" class="area">
+				<h2>出身</h2>
+				<ul>
+					<li>地元
+						<div id="text1">広島県</div>
+					</li>
+					<li>現在
+						<div id="text1">埼玉県蕨市</div>
+					</li>
+					<li>学校
+						<div id="text1">広島情報専門学校 / 北海道情報大学</div>
+					</li>
+				</ul>
+				<!--/area-->
+			</div>
+			<div id="othor" class="area">
+				<h2>その他</h2>
+				<ul>
+					<li>カレーライス</li>
+					<li>ドリア</li>
+					<li>グラタン</li>
+				</ul>
+				<!--/area-->
+			</div>
+			<!--wrapper-->
+		</div>
+	</main>
+
+	<footer> </footer>
+	<script type="text/javascript">
+		'use strict';
+
+		const mainArray = document.getElementById('main');
+
+		let boxClass = document.querySelectorAll('.sub');
+		for (let i = 0; i < boxClass.length; i++) {
+			console.log(boxClass[i].alt);
+		}
+
+		const subArray = document.querySelectorAll('.sub');
+		subArray.forEach(function(item, index) {
+			item.onclick = function() {
+				console.log(this.dataset.image); //data-imageからファイルパスを取得
+				document.getElementById('main').src = this.dataset.image;
+			}
+		});
+	</script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script
+		src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/js/5-4-1.js"></script>
 
 </body>
 </html>
