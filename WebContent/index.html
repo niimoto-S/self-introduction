@@ -33,6 +33,7 @@
 				<li><a href="#profile">プロフィール</a></li>
 				<li><a href="#hobby">趣味</a></li>
 				<li><a href="#birthplace">出身地</a></li>
+				<li><a href="#other">その他</a></li>
 			</ul>
 			<div id="profile" class="area">
 				<h2>プロフィール</h2>
@@ -61,15 +62,24 @@
 					<li>
 						<div>PCゲームやVR</div>
 						<section>
-							<img alt="main画像" id="main" src="img/01.png" width="20%"
-								height="20%"><br> <img alt="sub画像1" class="sub"
+							<img alt="main画像" id="main" src="img/01.png"
+								><br> <img alt="sub画像1" class="sub"
 								src="img/01.png" data-image="img/01.png"> <img
 								alt="sub画像2" class="sub" src="img/02.png"
 								data-image="img/02.png"> <img alt="sub画像3" class="sub"
 								src="img/03.png" data-image="img/03.png">
 						</section>
 					</li>
-					<li>料理</li>
+					<li>
+						<div>料理<b>(男飯)</b></div>
+						<section>
+							<img alt="main画像" id="main2" src="img/IMG_3745.png"><br>
+							<img alt="sub画像1" class="sub2" src="img/IMG_3745.png" data-image="img/IMG_3745.png">
+							<img alt="sub画像2" class="sub2" src="img/IMG_3756.png" data-image="img/IMG_3756.png">
+							<img alt="sub画像3" class="sub2" src="img/IMG_3770.png" data-image="img/IMG_3770.png">
+						</section>
+					</li>
+
 				</ul>
 				<!--/area-->
 			</div>
@@ -88,6 +98,21 @@
 				</ul>
 				<!--/area-->
 			</div>
+			<div id="other" class="area">
+				<h2>その他</h2>
+				<ul>
+					<li>所属
+						<div id="text1">株式会社アクロネット Acronet Co., Ltd</div>
+					</li>
+					<li>得意言語
+						<div id="text1">java</div>
+					</li>
+					<li>好きなフレームワーク
+						<div id="text1">Spring boot</div>
+					</li>
+				</ul>
+				<!--/area-->
+			</div>
 		</div>
 	</main>
 
@@ -95,20 +120,21 @@
 	<script type="text/javascript">
 		'use strict';
 
-		const mainArray = document.getElementById('main');
-
-		let boxClass = document.querySelectorAll('.sub');
-		for (let i = 0; i < boxClass.length; i++) {
-			console.log(boxClass[i].alt);
-		}
-
 		const subArray = document.querySelectorAll('.sub');
 		subArray.forEach(function(item, index) {
 			item.onclick = function() {
-				console.log(this.dataset.image); //data-imageからファイルパスを取得
 				document.getElementById('main').src = this.dataset.image;
 			}
 		});
+
+		const subArray2 = document.querySelectorAll('.sub2');
+		subArray2.forEach(function(item, index) {
+			item.onclick = function() {
+				document.getElementById('main2').src = this.dataset.image;
+			}
+		});
+
+
 	</script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
