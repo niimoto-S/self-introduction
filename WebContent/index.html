@@ -2,16 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hello world</title>
-<link rel="stylesheet" href="css/style.css">
+<title>自己紹介サイト</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css"
 	href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
 <link rel="stylesheet" type="text/css"
 	href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/css/5-4-1.css">
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 </head>
 <body>
+
+
 
 	<div id="search-wrap">
 		<form role="search" method="get" action="">
@@ -53,6 +57,12 @@
 					<li>嫌いな食べ物
 						<div id="text1">トマト</div>
 					</li>
+					<li>飲む酒
+						<div id="text1">氷結レモン・コークハイ・ハイボール</div>
+					</li>
+					<li>生態
+						<div id="text1">インドア</div>
+					</li>
 				</ul>
 				<!--/area-->
 			</div>
@@ -80,6 +90,18 @@
 						</section>
 					</li>
 
+					<li>
+						<div>ホロライブ</div>
+						<section>
+							<img alt="main画像" id="main3" src="img/001.png"><br>
+							<img alt="sub画像1" class="sub3" src="img/001.png" data-image="img/001.png">
+							<img alt="sub画像2" class="sub3" src="img/002.png" data-image="img/002.png">
+							<img alt="sub画像3" class="sub3" src="img/003.png" data-image="img/003.png">
+						</section>
+					</li>
+
+
+
 				</ul>
 				<!--/area-->
 			</div>
@@ -104,19 +126,30 @@
 					<li>所属
 						<div id="text1">株式会社アクロネット Acronet Co., Ltd</div>
 					</li>
-					<li>得意言語
+					<li>得意なプログラミング言語
 						<div id="text1">java</div>
 					</li>
 					<li>好きなフレームワーク
 						<div id="text1">Spring boot</div>
+					</li>
+					<li>中学時代の記憶
+						<div id="text1">バスケ</div>
+					</li>
+					<li>高校時代の記憶
+						<div id="text1">自転車</div>
+					</li>
+					<li>専門・大学時代の記憶
+						<div id="text1">バイト</div>
 					</li>
 				</ul>
 				<!--/area-->
 			</div>
 		</div>
 	</main>
-
-	<footer> </footer>
+	<div id="page_top"><a href="#"></a></div>
+	<footer id="footer">
+    	<small>&copy; copyright. niimoto</small>
+    </footer>
 	<script type="text/javascript">
 		'use strict';
 
@@ -134,6 +167,20 @@
 			}
 		});
 
+		const subArray3 = document.querySelectorAll('.sub3');
+		subArray3.forEach(function(item, index) {
+			item.onclick = function() {
+				document.getElementById('main3').src = this.dataset.image;
+			}
+		});
+
+		const subArray4 = document.querySelectorAll('.sub4');
+		subArray4.forEach(function(item, index) {
+			item.onclick = function() {
+				document.getElementById('main4').src = this.dataset.image;
+			}
+		});
+
 
 	</script>
 	<script type="text/javascript" src="js/script.js"></script>
@@ -145,5 +192,8 @@
 	<script
 		src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-4-1/js/5-4-1.js"></script>
 
+
+	<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
 </body>
 </html>
